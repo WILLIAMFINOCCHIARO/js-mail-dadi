@@ -20,7 +20,7 @@ let x = email.length;
 console.log(x);
 console.log(email);
 // PROMPT EMAIL DELL'UTENTE
-let emailutente = prompt("Qual'è la tua email?");
+let emailutente = isNaN(prompt("Qual'è la tua email?"));
 // CONTROLLO ARRAY ATTRAVERSO CICLO
 let sentinella = false;
 for(let i = 0; i < email.length; i++){
@@ -43,13 +43,27 @@ console.log("email non trovata");
 //  sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
 // GENERARE I NUMERI CON ARRAY E CREARE UN RANDOM DEI NUMERI, STABILIRE IL VINCITORE
-
-  let random = Math.floor(Math.random()*6)+ 1;
-   console.log(random);
-  let randomCPU = parseInt(prompt("Please enter your number"));
-
-
+  //  funzione click
   document.getElementById("random").addEventListener("click", myFunction);
     function myFunction() {
-      alert ("Hello World!");
+
+      // creo un elemento div
+      let tu = document.createElement("div");
+      let container = document.querySelector('.container');
+
+      // lo posiziono all'interno del container
+      container.prepend(tu);
+      let utente = alert = "il tuo numero è" + (Math.floor(Math.random()*6)+ 1);
+      let random = (Math.floor(Math.random()*6)+ 1);
+      
+
+      //  condizione se l utente vince o perde
+      if ( utente > random) {
+        console.log("hai vinto");
+        let vincitore = document.querySelector('div').innerHTML = "HAI VINTO";
+      }
+      else if ( utente < random) {
+        console.log("hai perso");
+        let perdente = document.querySelector('div').innerHTML = "HAI PERSO";
+      }
 } 
