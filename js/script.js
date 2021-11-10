@@ -7,3 +7,35 @@
 // si ma noi cosa vogliamo fare?
 // torniamo a scrivere in italiano
 // proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
+
+// PRIMO ESERCIZIO 
+
+
+// ARRAY DELL'EMAIL
+const email = ['william.@gmail.com','stefano.@gmail.com','franco.@gmail.com','sara.@gmail.com'];
+// PUSH DELL'EMAIL DI DUE STRINGHE
+email.push('carla.@gmail.com','paola.@gmail.com');
+// LENGTH DELL'EMAIL
+let x = email.length;
+console.log(x);
+console.log(email);
+// chiedo all'utente la sua email 
+let emailutente = prompt("Qual'è la tua email?");
+// CONTROLLO ARRAY ATTRAVERSO CICLO
+let sentinella = false;
+for(let i = 0;i < email.length; i++){
+ console.log(email[i]);
+ // CONDIZIONE SE LA SENTINELLA IS TRUE
+ if (email[i] == emailutente) {
+   sentinella = true;
+ }
+}
+// CONDIZIONE EMAIL TROVATA O NON TROVATA
+if (sentinella) {
+console.log('email trovata');
+}
+else 
+console.log("email non trovata");
+
+
+// SECONDO ESERCIZIO 
