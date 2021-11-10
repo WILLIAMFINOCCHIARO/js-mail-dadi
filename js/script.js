@@ -53,11 +53,14 @@ console.log("email non trovata");
 
       // lo posiziono all'interno del container
       container.prepend(tu);
-      let utente = alert = "il tuo numero è" + (Math.floor(Math.random()*6)+ 1);
-      let random = (Math.floor(Math.random()*6)+ 1);
+      let utente =  (Math.floor(Math.random()*6)+ 1);
+      let random =  (Math.floor(Math.random()*6)+ 1);
+
+      let number= document.querySelector("#utente").innerHTML = ("Il tuo numero è " + (utente));
+      let numberCPU = document.querySelector('#computer').innerHTML = ("Il numero del tuo computer è " + (random));
       
 
-      //  condizione se l utente vince o perde
+      //  condizione se l'utente vince o perde
       if ( utente > random) {
         console.log("hai vinto");
         let vincitore = document.querySelector('div').innerHTML = "HAI VINTO";
@@ -66,4 +69,9 @@ console.log("email non trovata");
         console.log("hai perso");
         let perdente = document.querySelector('div').innerHTML = "HAI PERSO";
       }
+      else if ( utente == random) {
+        console.log("hai perso");
+        let pari = document.querySelector('div').innerHTML = "PARI";
+      }
+      
 } 
