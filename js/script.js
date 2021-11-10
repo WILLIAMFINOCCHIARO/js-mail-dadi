@@ -12,15 +12,15 @@
 
 
 // ARRAY DELL'EMAIL
-const email = ['william.@gmail.com','stefano.@gmail.com','franco.@gmail.com','sara.@gmail.com'];
+const email = ['william@gmail.com','stefano@gmail.com','franco@gmail.com','sara@gmail.com'];
 // PUSH DELL'EMAIL DI DUE STRINGHE
-email.push('carla.@gmail.com','paola.@gmail.com');
+email.push('carla@gmail.com','paola@gmail.com');
 // LENGTH DELL'EMAIL
 let x = email.length;
 console.log(x);
 console.log(email);
 // PROMPT EMAIL DELL'UTENTE
-let emailutente = isNaN(prompt("Qual'è la tua email?"));
+let emailutente = prompt("Qual'è la tua email?");
 // CONTROLLO ARRAY ATTRAVERSO CICLO
 let sentinella = false;
 for(let i = 0; i < email.length; i++){
@@ -32,10 +32,12 @@ for(let i = 0; i < email.length; i++){
 }
 // CONDIZIONE EMAIL TROVATA O NON TROVATA
 if (sentinella) {
-console.log('email trovata');
+  document.getElementById("email").innerHTML = "email idonea";
+  console.log('email idonea');
 }
 else 
-console.log("email non trovata");
+document.getElementById("email").innerHTML = "email non idonea";
+console.log("email non idonea");
 
 
 // SECONDO ESERCIZIO 
